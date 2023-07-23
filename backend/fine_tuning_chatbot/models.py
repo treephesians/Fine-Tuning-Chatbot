@@ -14,6 +14,7 @@ class FineTunedModel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='fine_tuned_models', null=True)
     file_id = models.CharField(max_length=200, null=True, blank=True)
     fine_tune_id = models.CharField(max_length=200, null=True, blank=True)
+    
     fine_tuned_model = models.CharField(max_length=200, null=True, blank=True)
     status = models.CharField(max_length=50, null=True, blank=True)
 
